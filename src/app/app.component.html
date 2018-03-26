@@ -1,0 +1,5 @@
+<app-header></app-header>
+<main role="main" class="container d-flex" style="flex:1;flex-direction:column;">
+ <app-add-memory (addMemoryHandle)="addMemoryHandle($event)"></app-add-memory>
+ <app-memory-list [newMemory]="newMemory"></app-memory-list>
+</main>

@@ -1,0 +1,29 @@
+<ng-template #content let-c="close">
+    <div class="modal-header bg-light">
+        <h4 class="modal-title lead pl-2">Delete Memory</h4>
+        <button type="button" class="close" aria-label="Close" (click)="c(false)">
+        <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <p>Are you sure to delete a memory?</p>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-dark btn-sm" (click)="c(true)">Yes</button>
+        <button type="button" class="btn btn-dark btn-sm" (click)="c(false)">No</button>
+    </div>
+</ng-template>
+<div class="p-1 border-bottom border-gray small d-flex flex-row">
+  <div class="fill d-flex flex-column justify-content-between">
+      <div class="text-muted">
+          <strong>{{memory.name}}</strong>
+          <span class="font-italic">({{memory.email}}{{memory.id}})</span>
+      </div>
+      <div>
+          {{memory.comments}}
+      </div>
+  </div>
+  <div style="width: 40px;cursor: pointer;" class="align-self-center">
+    <i class="material-icons text-muted" style="font-size: 1.2rem;" (click)="open(content)">delete</i>
+  </div>
+</div>

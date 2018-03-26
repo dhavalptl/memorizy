@@ -1,0 +1,45 @@
+:host{
+    height:320px;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.mainbtn {
+    background-color: #efefef;
+    border-radius: 3px;
+    position: relative;
+    height: 25px;
+    font-size: .8em;
+    border: 1px solid lightgray;
+}
+
+button:focus {
+    outline: none;
+}
+
+
+ul {
+    padding: 0px;
+    margin: 0px;
+    font-size: .8em;
+    border: 1px solid lightgrey;
+    border-top: none;
+    width:200px;
+    position:absolute;
+    background-color:white;
+    list-style:none;
+}
+
+li {
+    font-size: 1em;
+    height: 25px;
+    padding: 0px;
+    margin: 0px;
+    padding-top: 2px;
+    padding-left: 10px;
+}
+
+li:hover{
+    background-color: lightgrey;
+}

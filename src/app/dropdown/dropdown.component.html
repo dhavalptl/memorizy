@@ -1,0 +1,9 @@
+<div class="dropdown">
+  <button class="mainbtn" style="width: 200px;text-align:left" (click)="showList = !showList">
+    <div class="selectedlabel">{{selectedItem.label}}</div>
+    <i class="dropdowntrigger">&#9660;</i>
+  </button>
+  <ul [style.display]="showList ? 'block' : 'none'" (click)="showList = !showList">
+      <li *ngFor="let option of options | orderby: 'label'" (click)="onListSelect(option)">{{option.label}}</li>
+  </ul>
+</div>
